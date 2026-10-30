@@ -47,6 +47,7 @@
                 android:textColorHint="@color/texto2"
                 android:textSize="14sp" />
 
+            <Button android:id="@+id/btnLink" style="@style/Aba" android:text="🔗 Link" />
             <Button android:id="@+id/btnConfig" style="@style/Aba" android:text="⚙" />
         </LinearLayout>
     </HorizontalScrollView>

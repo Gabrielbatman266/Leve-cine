@@ -93,6 +93,7 @@ public class MainActivity extends Activity {
         }
         findViewById(R.id.btnLista).setOnClickListener(v -> escolherLista());
         findViewById(R.id.btnConfig).setOnClickListener(v -> configurar());
+        findViewById(R.id.btnLink).setOnClickListener(v -> startActivity(new Intent(this, LinkActivity.class)));
 
         busca.setOnEditorActionListener((v, acao, ev) -> {
             boolean enter = ev != null && ev.getKeyCode() == KeyEvent.KEYCODE_ENTER
