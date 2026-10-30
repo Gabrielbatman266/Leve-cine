@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="320dp" android:height="180dp"
+    android:viewportWidth="320" android:viewportHeight="180">
+    <path android:fillColor="#0E0F13" android:pathData="M0,0h320v180h-320z"/>
+    <path android:fillColor="#E8B04B" android:pathData="M60,60L110,90L60,120Z"/>
+    <!-- "LEVE" em blocos simples -->
+    <path android:fillColor="#F2F2F2" android:pathData="M135,65h8v42h22v8h-30z"/>
+    <path android:fillColor="#F2F2F2" android:pathData="M172,65h28v8h-20v13h18v8h-18v13h20v8h-28z"/>
+    <path android:fillColor="#F2F2F2" android:pathData="M205,65h8l10,38l10,-38h8l-14,50h-8z"/>
+    <path android:fillColor="#F2F2F2" android:pathData="M246,65h28v8h-20v13h18v8h-18v13h20v8h-28z"/>
+</vector>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="fundo">#0E0F13</color>
+    <color name="cartao">#1A1C23</color>
+    <color name="destaque">#E8B04B</color>
+    <color name="texto">#F2F2F2</color>
+    <color name="texto2">#9AA0AA</color>
+
+    <style name="Tema" parent="@android:style/Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/fundo</item>
+        <item name="android:colorAccent">@color/destaque</item>
+        <item name="android:colorPrimary">@color/fundo</item>
+        <item name="android:colorPrimaryDark">@color/fundo</item>
+        <item name="android:textColor">@color/texto</item>
+    </style>
+
+    <style name="TemaPlayer" parent="@android:style/Theme.Material.NoActionBar.Fullscreen">
+        <item name="android:windowBackground">@android:color/black</item>
+    </style>
+</resources>
