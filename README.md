@@ -24,3 +24,9 @@ Player leve de canais, filmes e séries para Android, celular e TV box.
 "series":  [{ "nome": "...", "busca": "consulta do archive.org" }],
 "extras":  [{ "tipo": "filme|serie|canal", "titulo": "...", "url": "link direto", "archive": "id do archive.org" }]
 ```
+
+## Leve Link (segundo ícone do mesmo APK)
+Cole o link de uma página e ele lista os vídeos e áudios que estão direto nela (.mp4, .m3u8, .webm, .mp3…), tocando no mesmo player leve, sem anúncios.
+- Também abre links diretos de mídia e listas .m3u
+- No navegador: **Compartilhar → Leve Link**
+- Não funciona em sites que escondem o vídeo em players de terceiros ou com proteção

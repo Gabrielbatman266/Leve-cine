@@ -12,6 +12,11 @@ public final class Net {
     private Net() {}
 
     public static byte[] bytes(String endereco) throws Exception {
+        return bytes(endereco, 0);
+    }
+
+    /** limite > 0: para de ler depois de tantos bytes (páginas grandes ou vídeo colado por engano). */
+    public static byte[] bytes(String endereco, int limite) throws Exception {
         String atual = endereco;
         for (int saltos = 0; saltos < 6; saltos++) {
             HttpURLConnection c = (HttpURLConnection) new URL(atual).openConnection();
@@ -35,7 +40,10 @@ public final class Net {
                 ByteArrayOutputStream out = new ByteArrayOutputStream();
                 byte[] buf = new byte[16384];
                 int n;
-                while ((n = in.read(buf)) > 0) out.write(buf, 0, n);
+                while ((n = in.read(buf)) > 0) {
+                    out.write(buf, 0, n);
+                    if (limite > 0 && out.size() >= limite) break;
+                }
                 return out.toByteArray();
             } finally {
                 c.disconnect();
@@ -46,5 +54,9 @@ public final class Net {
 
     public static String texto(String endereco) throws Exception {
         return new String(bytes(endereco), "UTF-8");
+    }
+
+    public static String pagina(String endereco) throws Exception {
+        return new String(bytes(endereco, 4 * 1024 * 1024), "UTF-8");
     }
 }

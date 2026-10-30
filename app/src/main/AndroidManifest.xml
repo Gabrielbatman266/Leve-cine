@@ -28,6 +28,27 @@
             </intent-filter>
         </activity>
 
+        <!-- Segundo app no mesmo APK: Leve Link -->
+        <activity
+            android:name=".LinkActivity"
+            android:exported="true"
+            android:label="Leve Link"
+            android:icon="@drawable/ic_link"
+            android:taskAffinity="com.gabriel.levecine.link"
+            android:launchMode="singleTask"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard|navigation"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter android:label="Leve Link">
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+
         <activity
             android:name=".PlayerActivity"
             android:exported="false"
